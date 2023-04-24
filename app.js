@@ -8,6 +8,10 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const todoRouter = require('./routes/todoslist');
 var app = express();
+const ejs = require('ejs');
+ejs.delimiter = '/';
+ejs.openDelimiter = '[';
+ejs.closeDelimiter = ']';
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
